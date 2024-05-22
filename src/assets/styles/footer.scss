@@ -1,0 +1,23 @@
+@use '../../base';
+
+.social-media {
+    @extend %flex-center;
+    gap: 25px;
+    transition: 0.22s;
+    .social-icon {
+        @extend %flex-center;
+        height: 2.75rem;
+        width: 2.75rem;
+        background-color: rgb(57, 57, 57);
+        border-radius: 50%;
+        color: base.$primary-color;
+        transition: 0.5s;
+    }
+    .social-icon:hover {
+        color: white;
+    }
+}
+
+.social-media:hover {
+    opacity: 0.85;
+}
