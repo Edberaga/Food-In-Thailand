@@ -1,0 +1,44 @@
+@use 'base';
+
+#root, body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0 auto;
+  height: 100vh;
+  
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+main {
+  @extend %full-size;
+  @extend %flex-column;
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+}
+
+.background {
+  @extend %full-size;
+  position: absolute;
+  background-image: url('./assets/images/background.jpg');
+  background-size: cover;
+  filter: brightness(0.39);
+}
+
+a {
+  transition: 0.4s;
+  font-weight: 500;
+  color: base.$primary-color;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: base.$light-primary-color;
+}
